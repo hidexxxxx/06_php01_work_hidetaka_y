@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="archive.css">
+    <title>spotlight × Cloud Garage</title>
+</head>
+
+<body>
+    <header id="header">
+        <div class="logo-box">
+            <a href="archive.html"><img class="brand-logo" src="img/logo/brand-logo.png" alt="logo"></a>
+        </div>
+        <div class="hamburger-menu">
+            <span class="line"></span>
+            <span class="line"></span>
+            <span class="line"></span>
+        </div>
+        <nav class="wrapper">
+            <ul class="menu">
+                <li class="menu-top"><a href="#">TOP</a></li>
+                <li class="menu-collection"><a href="collection.html">COLLECTION</a></li>
+                <li class="menu-archive"><a href="archive.html">ARCHIVE</a></li>
+                <li class="menu-category"><a href="#">CATEGORY</a></li>
+                <li class="login-login"><a href="index.html">LOGIN</a></li>
+                <li class="login-contact"><a href="contact_input.php">CONTACT</a></li>
+            </ul>
+
+            <ul class="login">
+                <div class="profiles">
+                    <!-- プロフィール画像表示コード -->
+                    <div id="output-profile-photo">
+                        <img id="profile-photo" src="" alt="User Photo" onclick="location.href='resister.html';">
+                    </div>
+                    <!-- プロフィール名表示コード -->
+                    <h5 id="output"></h5>
+                </div>
+            </ul>
+        </nav>
+
+        <script src="https://www.gstatic.com/firebasejs/9.22.0/firebase-app.js"></script>
+        <script src="https://www.gstatic.com/firebasejs/9.22.0/firebase-storage.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
+        <!-- プロフィールテキストの読み込みコード -->
+        <script src="profile_textData_read.js" type="module"></script>
+
+        <!-- プロフィール画像の読み込みコード -->
+        <script src="profile_photoData_read.js" type="module"></script>
+
+
+    </header>
+
+    <body>
+        <main>
+            <div class="now-working">
+                <h3 class="now-working-h">NOW　WORKING</h3>
+                <div class="slider">
+                    <div>
+                        <img src="img/contents/mercedes/coloring/IMG_6311.JPG">
+                        <p>2023.5.1
+                            <br>ボディパーツの固定が完了しました。
+                        </p>
+                    </div>
+                    <div>
+                        <img src="img/contents/mercedes/coloring/IMG_6304.JPG">
+                        <p>2023.4.30
+                            <br>ボディパーツ接着の為、マスキングテープで固定。
+                        </p>
+                    </div>
+                    <div>
+                        <img src="img/contents/mercedes/IMG_6299.JPG">
+                        <p>2023.4.28
+                            <br>モノコック＆ロールバー＆ドライビングシートの組み付け。
+                        </p>
+                    </div>
+                    <div>
+                        <img src="img/contents/mercedes/IMG_6262.JPG">
+                        <p>2023.4.20
+                            <br>サスペンション周りの部品作成。ダンパーのスプリングとシリンダーの塗り分けに苦労しました。
+                        </p>
+                    </div>
+                    <div>
+                        <img src="img/contents/mercedes/IMG_6245.JPG">
+                        <p>2023.4.16
+                            <br>買って箱を開けた状態。たくさん部品が入ってます。
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="archive-all">
+                <br>
+                <br>
+                <h3 class="archive">Archive</h3>
+                <div class="archive-1st-row">
+                    <div>
+                        <h4>No.1</h4>
+                        <img src="img/contents/carolla/coloring/IMG_5281.JPG" onclick="location.href='archive_A.html';">
+                        <p>2023.3.10
+                            <br>Toyota Callora WRC completion
+                        </p>
+                    </div>
+                    <div>
+                        <h4>No.2</h4>
+                        <img src="img/contents/gtr/coloring/IMG_6129.JPG">
+                        <p>2022.8.19
+                            <br>Nissan GTR 2003 No.23 completion
+                        </p>
+                    </div>
+                    <div>
+                        <h4>No.3</h4>
+                        <img src="img/contents/458/IMG_2819.JPG">
+                        <p>2022.4.23
+                            <br>Ferrari F458 original completion
+                        </p>
+                    </div>
+                </div>
+                <div class="archive-2st-row">
+                    <div>
+                        <h4>No.4</h4>
+                        <img src="img/contents/rc-reybric/IMG_1351.JPG">
+                        <p>2022.4.01
+                            <br>Raybric NSX body-kit completion
+                        </p>
+                    </div>
+                    <div>
+                        <h4>No.5</h4>
+                        <img src="img/contents/ts020/IMG_2257.JPG">
+                        <p>2022.2.11
+                            <br>Toyota GT-one ts020 1993 No.3 completion
+                        </p>
+                    </div>
+                    <div>
+                        <h4>No.6</h4>
+                        <img src="img/contents/mercedes/coloring/IMG_6340.JPG">
+                        <p>2022.1.29
+                            <br>Mercedes AMG-GT completion
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <link rel="stylesheet" type="text/css"
+                href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.css" />
+            <link rel="stylesheet" type="text/css"
+                href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick-theme.css">
+            <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+            <script type="text/javascript"
+                src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.js"></script>
+
+            <!-- 製作中表示のスライダー -->
+            <script src="archive_head_slider.js"></script>
+
+        </main>
+
+    </body>
+
+    <footer>
+        <nav class="wrapper-footer">
+            <ul class="menu-footer">
+                <li><a href="#">初めての方へ</a></li>
+                <li><a href="#">よくある質問</a></li>
+                <li><a href="#">利用規約</a></li>
+                <li><a href="#">特定商品取引法</a></li>
+                <li><a href="#">プライバシーポリシー</a></li>
+                <li><a href="#">お問い合わせ</a></li>
+                <li><a href="#">会社概要</a></li>
+            </ul>
+        </nav>
+        <h5 class="copy-rights">©️2023 Cloud Garage Co,.Ltd. All Rights Reserved</h5>
+    </footer>
+
+
+</html>

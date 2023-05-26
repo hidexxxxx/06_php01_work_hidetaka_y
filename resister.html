@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="resister.css">
+    <title>spotlight × Cloud Garage</title>
+</head>
+
+<body>
+    <header id="header">
+        <div class="logo-box">
+            <a href="archive.html"><img class="brand-logo" src="img/logo/brand-logo.png" alt="logo"></a>
+        </div>
+        <div class="hamburger-menu">
+            <span class="line"></span>
+            <span class="line"></span>
+            <span class="line"></span>
+        </div>
+        <nav class="wrapper">
+            <ul class="menu">
+                <li class="menu-top"><a href="#">TOP</a></li>
+                <li class="menu-collection"><a href="collection.html">COLLECTION</a></li>
+                <li class="menu-archive"><a href="archive.html">ARCHIVE</a></li>
+                <li class="menu-category"><a href="#">CATEGORY</a></li>
+                <li class="login-login"><a href="index.html">LOGIN</a></li>
+                <li class="login-contact"><a href="contact_input.php">CONTACT</a></li>
+            </ul>
+
+            <ul class="login">
+                <div class="profiles">
+                    <!-- プロフィール画像表示 -->
+                    <div id="output-profile-photo">
+                        <img id="profile-photo" src="" alt="User Photo" onclick="location.href='resister.html';">
+                    </div>
+                    <!-- プロフィール名表示 -->
+                    <h5 id="output"></h5>
+                </div>
+            </ul>
+        </nav>
+
+        <script src="https://www.gstatic.com/firebasejs/9.22.0/firebase-app.js"></script>
+        <script src="https://www.gstatic.com/firebasejs/9.22.0/firebase-storage.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
+        <!-- プロフィールテキストの読み込みコード -->
+        <script src="profile_textData_read.js" type="module"></script>
+
+        <!-- プロフィール画像の読み込みコード -->
+        <script src="profile_photoData_read.js" type="module"></script>
+
+    </header>
+
+    <main>
+        <div class="form-set">
+            <div class="profile-photo">
+                <label class="profile-label">▼プロフィール画像を設定</label>
+                <div id="result"></div>
+                <div class="profile-photo-button">
+                    <input type="file" id="imageInput">
+                    <button type="button" onclick="uploadImage()">アップロード</button>
+                </div>
+            </div>
+            <br>
+            <div class="input-name-class">
+                <input type="text" id="input-name" placeholder="好きな名前(表示名)">
+            </div>
+            <br>
+            <div class="input-birth-class">
+                <input type="text" id="input-birth" placeholder="生年月日 (例:1993年1月29日はの場合：1993/1/29)">
+            </div>
+            <br>
+            <div class="input-commit-class">
+                <textarea rows="4" id="input-commit" placeholder="一言コメント"></textarea>
+            </div>
+            <ul class="control-button">
+                <button type="button" class="save-button" id="save">Upload</button>
+                <button type="button" class="clear-button" id="clear">Delete</button>
+            </ul>
+        </div>
+
+        <script src="https://www.gstatic.com/firebasejs/9.22.0/firebase-app.js"></script>
+        <script src="https://www.gstatic.com/firebasejs/9.22.0/firebase-storage.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
+
+        <!-- ▼ブラウザへ画像のアップロードコード -->
+        <script src="profile_photoData_upload.js"></script>
+
+        <!-- ▼プロフィール画像のstorageへのアップロードコード -->
+        <script src="profile_photoData_save.js" type="module"></script>
+
+        <!-- 表示時間の調整コード -->
+        <script src="time_adjust.js"></script>
+
+        <!-- プロフィールのテキストデータの保存コード -->
+        <script src="profile_textData_save.js" type="module"></script>
+
+    </main>
+
+</body>
+
+
+<footer>
+    <nav class="wrapper-footer">
+        <ul class="menu-footer">
+            <li><a href="#">初めての方へ</a></li>
+            <li><a href="#">よくある質問</a></li>
+            <li><a href="#">利用規約</a></li>
+            <li><a href="#">特定商品取引法</a></li>
+            <li><a href="#">プライバシーポリシー</a></li>
+            <li><a href="#">お問い合わせ</a></li>
+            <li><a href="#">会社概要</a></li>
+        </ul>
+    </nav>
+    <h5 class="copy-rights">©️2023 Cloud Garage Co,.Ltd. All Rights Reserved</h5>
+</footer>
+
+</html>
